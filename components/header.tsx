@@ -29,6 +29,16 @@ const navItems = [
       },
     ]
   },
+  {
+    name: "Domains",
+    href: "/domains",
+    subNav: [
+      {
+        name: "Whois Lookup",
+        href: "/whois"
+      },
+    ]
+  }
 ]
 
 export const Header = () => {
@@ -156,7 +166,6 @@ export const Header = () => {
 
 function ListItem({
                     title,
-                    children,
                     href,
                     ...props
                   }: React.ComponentPropsWithoutRef<"li"> & { href: string }) {
