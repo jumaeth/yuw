@@ -1,7 +1,7 @@
 "use client"
 
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import WhoIsForm from "@/app/(public)/domains/whois/whois-form";
+import WhoIsForm from "@/app/(public)/tools/whois/whois-form";
 import {useState} from "react";
 
 interface WhoisResult {

@@ -7,7 +7,7 @@ import {zodResolver} from "@hookform/resolvers/zod";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Icons} from "@/components/icons";
-import {EmailGeneratorFields} from "@/app/(public)/mail/qr-generator/email-generator-fields";
+import {EmailGeneratorFields} from "@/app/(public)/tools/qr-generator/email-generator-fields";
 import {manualSettingsFormData, manualSettingsFormSchema} from "@/lib/validations/manual-settings";
 import {generateMailQr} from "@/actions/public/qr/generateMailQr";
 import {toast} from "sonner";

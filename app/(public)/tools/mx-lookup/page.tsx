@@ -1,5 +1,5 @@
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import MxForm from "@/app/(public)/mail/mx-lookup/mx-form";
+import MxForm from "@/app/(public)/tools/mx-lookup/mx-form";
 
 export default function MailConfigPage() {
   return (

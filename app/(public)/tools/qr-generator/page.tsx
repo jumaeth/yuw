@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
 import QRCode from "qrcode";
-import QrForm from "@/app/(public)/mail/qr-generator/qr-form";
+import QrForm from "@/app/(public)/tools/qr-generator/qr-form";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
-import ManualSettingsForm from "@/app/(public)/mail/qr-generator/manual-settings-form";
+import ManualSettingsForm from "@/app/(public)/tools/qr-generator/manual-settings-form";
 
 export default function MailConfigPage() {
   const [qr, setQr] = useState("");

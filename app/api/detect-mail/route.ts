@@ -4,13 +4,12 @@ import {KNOWN_PROVIDERS} from "@/lib/providers";
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const email = searchParams.get("email");
+  const domain = searchParams.get("domain");
 
-  if (!email || !email.includes("@")) {
-    return NextResponse.json({ error: "Invalid email" }, { status: 400 });
+  if (!domain) {
+    return NextResponse.json({ error: "Invalid domain" }, { status: 400 });
   }
 
-  const domain = email.split("@")[1]!;
   if (KNOWN_PROVIDERS[domain]) {
     return NextResponse.json(KNOWN_PROVIDERS[domain]);
   }

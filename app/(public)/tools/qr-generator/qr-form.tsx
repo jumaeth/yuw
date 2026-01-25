@@ -8,7 +8,7 @@ import {qrFormData, qrFormSchema} from "@/lib/validations/qr";
 import {toast} from "sonner";
 import {Button} from "@/components/ui/button";
 import {Icons} from "@/components/icons";
-import {EmailGeneratorFields} from "@/app/(public)/mail/qr-generator/email-generator-fields";
+import {EmailGeneratorFields} from "@/app/(public)/tools/qr-generator/email-generator-fields";
 import {generateMailQr} from "@/actions/public/qr/generateMailQr";
 
 export default function QrForm() {

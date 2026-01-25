@@ -16,29 +16,26 @@ import Logo from "@/components/logo";
 
 const navItems = [
   {
-    name: "Mail",
-    href: "/mail",
+    name: "Tools",
+    href: "/tools",
     subNav: [
       {
-        name: "QR-Generator",
+        name: "Email QR-Generator",
+        description: "Generate QR codes for email configuration for apple devices.",
         href: "/qr-generator"
       },
       {
-        name: "MX Lookup",
+        name: "Domain MX Lookup",
+        description: "Lookup MX records for a domain.",
         href: "/mx-lookup"
       },
-    ]
-  },
-  {
-    name: "Domains",
-    href: "/domains",
-    subNav: [
       {
-        name: "Whois Lookup",
+        name: "Domain Whois Lookup",
+        description: "Perform a Whois lookup for a domain.",
         href: "/whois"
       },
     ]
-  }
+  },
 ]
 
 export const Header = () => {

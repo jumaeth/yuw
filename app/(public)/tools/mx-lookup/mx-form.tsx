@@ -9,16 +9,16 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Icons} from "@/components/icons";
 import {Card} from "@/components/ui/card";
-import {emailFormData, emailFormSchema} from "@/lib/validations/email";
+import {domainFormData, domainFormSchema} from "@/lib/validations/domain";
 
 export default function MxForm() {
   const [isSaving, setIsSaving] = useState<boolean>(false)
   const [imap, setImap] = useState("");
   const [smtp, setSmtp] = useState("");
 
-  async function onSubmit(data: emailFormData) {
+  async function onSubmit(data: domainFormData) {
     setIsSaving(true);
-    const res = await fetch(`/api/detect-mail?email=${encodeURIComponent(data.email)}`);
+    const res = await fetch(`/api/detect-mail?domain=${encodeURIComponent(data.domain)}`);
     const result = await res.json();
 
     if (result.imap && result.smtp) {
@@ -31,10 +31,10 @@ export default function MxForm() {
     setIsSaving(false);
   }
 
-  const form = useForm<emailFormData>({
-    resolver: zodResolver(emailFormSchema),
+  const form = useForm<domainFormData>({
+    resolver: zodResolver(domainFormSchema),
     defaultValues: {
-      email: "",
+      domain: "",
     },
   })
   const {reset} = form;
@@ -46,14 +46,14 @@ export default function MxForm() {
           <div>
             <FormField
               control={form.control}
-              name="email"
+              name="domain"
               render={({field}) => (
                 <FormItem>
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>Domain</FormLabel>
                   <FormControl>
                     <Input
-                      id="email"
-                      placeholder="me@example.com"
+                      id="domain"
+                      placeholder="example.com"
                       className="col-span-3"
                       {...field}
                     />
