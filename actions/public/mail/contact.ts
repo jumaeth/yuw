@@ -19,7 +19,7 @@ export async function sendContactEmail(values: z.infer<typeof contactFormSchema>
 
   try {
     await resend.emails.send({
-      from: "Krainerdruck: Kontaktformular <contact@mail.yuw.ch>",
+      from: "YUW: Kontaktformular <contact@mail.yuw.ch>",
       to: "mj@yuw.ch",
       subject: `Neue Nachricht von: ${firstname} ${lastname}`,
       replyTo: email,

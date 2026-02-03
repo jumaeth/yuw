@@ -14,7 +14,7 @@ export default function MailConfigPage() {
     name: "John Doe",
     imap: "mail.domain.com",
     smtp: "smtp.domain.com",
-    org: "Acme Inc",
+    org: "YUW Inc",
     desc: "Work Email",
   });
 
