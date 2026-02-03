@@ -12,7 +12,7 @@ import {Separator} from "@/components/ui/separator";
 import {Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger} from "@/components/ui/sheet";
 import {Icons} from "@/components/icons";
 import {useState} from "react";
-import Logo from "@/components/logo";
+import YuwTitle from "@/components/yuw-title";
 
 const navItems = [
   {
@@ -51,7 +51,7 @@ export const Header = () => {
       <div className="hidden md:block">
         <div className="flex justify-between lg:w-1/2 md:w-2/3 pl-5 pr-5 mx-auto pt-2 pb-2">
           <Link href={"/home"} className="flex items-center">
-            <Logo/>
+            <YuwTitle/>
           </Link>
           <NavigationMenu className="ml-5">
             <NavigationMenuList>
@@ -91,7 +91,7 @@ export const Header = () => {
         <Sheet open={open} onOpenChange={setOpen}>
           <div className="flex items-center justify-between p-4">
             <Link href={"/home"} className="flex items-center">
-              <Logo/>
+              <YuwTitle/>
             </Link>
             <SheetTrigger asChild>
               <Icons.menu className="h-8 w-8"/>

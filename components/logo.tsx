@@ -1,10 +1,19 @@
 import * as React from "react";
+import Image from "next/image";
 
-export default function Logo() {
+interface Props {
+  width: number;
+}
+
+export default function Logo({width}: Props) {
   return (
     <>
-      {/*TODO: LOGO*/}
-      <h2 className="font-bold">YUW.</h2>
+      <Image
+        width={width}
+        height={width/2}
+        src="/assets/yuw-logo.svg"
+        alt="YUW Logo"
+      />
     </>
   )
 }
