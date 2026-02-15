@@ -1,0 +1,9 @@
+{
+  "$schema": "https://yuw.ch",
+  "git": {
+    "deploymentEnabled": {
+      "*": false,
+      "main": true
+    }
+  }
+}
