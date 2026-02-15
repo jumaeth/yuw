@@ -2,6 +2,8 @@ import { notFound } from "next/navigation";
 import {people} from "@/app/data/people";
 import QRCode from "qrcode";
 import Image from "next/image";
+import {Button} from "@/components/ui/button";
+import Link from "next/link";
 
 export default async function ContactPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
@@ -39,23 +41,19 @@ export default async function ContactPage({ params }: { params: Promise<{ slug: 
         />
       </div>
 
-      <div className="grid gap-2.5 mt-5">
-        <a
-          href={vcfUrl}
-          className="py-3.5 px-4 rounded-xl border border-gray-300 text-center hover:bg-gray-50"
-        >
-          Add Contact
-        </a>
-
+      <div className="flex flex-row gap-2 mt-6">
+        <Button asChild className="flex-1">
+          <Link href={vcfUrl}>Add Contact</Link>
+        </Button>
         {person.phone && (
-          <a href={`tel:${person.phone}`} className="py-3.5 px-4 rounded-xl border border-gray-300 text-center hover:bg-gray-50">
-            Call
-          </a>
+          <Button variant="outline" asChild className="flex-1">
+            <Link href={`tel:${person.phone}`}>Call</Link>
+          </Button>
         )}
         {person.email && (
-          <a href={`mailto:${person.email}`} className="py-3.5 px-4 rounded-xl border border-gray-300 text-center hover:bg-gray-50">
-            E-Mail
-          </a>
+          <Button variant="outline" asChild className="flex-1">
+            <Link href={`mailto:${person.email}`}>E-Mail</Link>
+          </Button>
         )}
       </div>
     </div>

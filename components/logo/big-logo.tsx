@@ -5,13 +5,13 @@ interface Props {
   width: number;
 }
 
-export default function Logo({width}: Props) {
+export default function BigLogo({width}: Props) {
   return (
     <>
       <Image
         width={width}
         height={width/2}
-        src="/assets/yuw-logo.svg"
+        src="/assets/yuw-logo-big.svg"
         alt="YUW Logo"
       />
     </>
